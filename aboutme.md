@@ -16,10 +16,8 @@ I am extremely interested in AR/VR/MR/XR technologies, and have developed for th
 I have engineered data forms that have increased effeciency more than ten fold for many companies by using open source libraries that utilize JSON schemas, C# reflection, and C# interfaces. 
 
 ### My Personal Information
- 
+
 #### My personal philosophy is that there is no such that as not having time. I believe in making time.
-
-
 No matter the situation, I keep my head up and always focus on my objective.
 
 I'm a 21 year old self-taught programmer with a bachelors degree in Computer Science from The University of Texas at Arlington. My dream is to become a video game developer. I plan to go into full-stack development until then.
