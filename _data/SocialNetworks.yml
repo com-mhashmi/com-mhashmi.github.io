@@ -8,17 +8,17 @@
 
 facebook:
   name: "Facebook"
-  baseURL: "https://www.facebook.com/prosdkr"
+  baseURL: "https://www.facebook.com/"
   icon: "fa-facebook"
 
 github:
   name: "GitHub"
-  baseURL: "https://github.com/prosdkr"
+  baseURL: "https://github.com/"
   icon: "fa-github"
 
 twitter:
   name: "Twitter"
-  baseURL: "https://twitter.com/prosdkr"
+  baseURL: "https://twitter.com/"
   icon: "fa-twitter"
 
 reddit:
@@ -28,7 +28,7 @@ reddit:
 
 google-plus:
   name: "Google+"
-  baseURL: "https://plus.google.com/prosdkr"
+  baseURL: "https://plus.google.com/"
   icon: "fa-google-plus"
 
 email:
@@ -53,12 +53,12 @@ stackoverflow:
 
 snapchat:
   name: "Snapchat"
-  baseURL: "https://www.snapchat.com/add/prosdkr"
+  baseURL: "https://www.snapchat.com/add/"
   icon: "fa-snapchat-ghost"
 
 instagram:
   name: "Instagram"
-  baseURL: "https://www.instagram.com/prosdkr"
+  baseURL: "https://www.instagram.com/"
   icon: "fa-instagram"
 
 youtube:
@@ -73,7 +73,7 @@ spotify:
 
 telephone:
   name: "Phone"
-  baseURL: "tel:2148625071"
+  baseURL: "tel:"
   icon: "fa-phone"
 
 rss:
@@ -83,7 +83,7 @@ rss:
 
 steam:
   name: "Steam"
-  baseURL: "https://steamcommunity.com/id/prosdkr"
+  baseURL: "https://steamcommunity.com/id/"
   icon: "fa-steam"
 
 twitch:
