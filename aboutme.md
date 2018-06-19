@@ -8,12 +8,12 @@ subtitle: Software Engineering Revolutionaire
 My name is Syed Isam Hashmi.
 I am a software engineer, and have been since I was ten years old. I have a passion for computer science, and a craving for knowledge that I have yet to quench.
 
-I am consistently attempting to utilize algorithm theories and object-oriented design tactics to learn about efficiency for programs I interface with daily in order to take our world one step further.
+I am consistently attempting to utilize algorithm theory and object-oriented design tactics to lean towards efficiency for programs that I interface with daily in order to take our world one step further.
 
-I'm proficient in Java, C#, C, C++, HTML, JavaScript, CSS.
-In my professional career, I have utilized .NET, and I am familiar with its usages and applications.
+I am proficient in Java, C#, C, C++, HTML, JavaScript, CSS.
+In my professional career, I have utilized .NET, and I am familiar with its use and application.
 I am extremely interested in AR/VR/MR/XR technologies, and have developed for the Microsoft HoloLens.
-I have engineered data forms that increased the company's effeciency more than ten fold by using open source libraries that utilize JSON schemas, C# reflection, and C# interfaces. 
+I have engineered data forms that have increased effeciency more than ten fold for many companies by using open source libraries that utilize JSON schemas, C# reflection, and C# interfaces. 
 
 ### My Personal Information
 
