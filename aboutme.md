@@ -18,7 +18,7 @@ I have engineered data forms that have increased effeciency more than ten fold f
 ### My Personal Information
 
 
-#### My personal philosophy is that there is no such that as not having time. I believe in making time.
+## My personal philosophy is that there is no such that as not having time. I believe in making time.
 
 
 No matter the situation, I keep my head up and always focus on my objective.
