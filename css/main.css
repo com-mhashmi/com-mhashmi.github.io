@@ -358,6 +358,7 @@ footer .theme-by {
 }
 .post-preview .post-entry {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
 }
 .post-entry-container {
   display: inline-block;
@@ -365,6 +366,7 @@ footer .theme-by {
 }
 .post-entry {
   width: 100%;
+  color: #FFFFFF;
 }
 .post-image {
   float: right;
