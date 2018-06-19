@@ -4,7 +4,7 @@ title: About Me
 subtitle: Software Engineering Revolutionaire
 ---
 ### My Professional Information
-
+-------------------------------
 My name is Syed Isam Hashmi.
 I am a software engineer, and have been since I was ten years old. I have a passion for computer science, and a craving for knowledge that I have yet to quench.
 
@@ -16,7 +16,7 @@ I am extremely interested in AR/VR/MR/XR technologies, and have developed for th
 I have engineered data forms that have increased effeciency more than ten fold for many companies by using open source libraries that utilize JSON schemas, C# reflection, and C# interfaces. 
 
 ### My Personal Information
- 
+---------------------------
 #### My personal philosophy is that there is no such that as not having time. I believe in making time.
 No matter the situation, I keep my head up and always focus on my objective.
 
