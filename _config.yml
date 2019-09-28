@@ -237,6 +237,7 @@ prose:
 
 plugins:
   - jekyll-paginate
+  - jekyll-relative-links
   - jekyll-sitemap
 
 # Beautiful Jekyll / Dean Attali
