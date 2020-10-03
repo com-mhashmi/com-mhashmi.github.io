@@ -17,7 +17,7 @@ baseurl: ""
 title: Syed Isam Hashmi
 
 # Short description of your site
-description: 
+description:
 
 # --- Navigation bar options --- #
 
@@ -25,10 +25,10 @@ description:
 navbar-links:
   About Me: "aboutme"
   Resources:
-#    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-     - Learn markdown: "http://www.markdowntutorial.com/"
-     - Stuff by me!: "http://mhashmi.com/mystuff"
- #   - GitHub Pages: "https://pages.github.com/"
+    #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+    - Learn markdown: "http://www.markdowntutorial.com/"
+    - Stuff by me!: "http://mhashmi.com/mystuff"
+  #   - GitHub Pages: "https://pages.github.com/"
 #  Author's home: "http://deanattali.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
@@ -52,6 +52,7 @@ hover-col: "#0085A1"
 footer-col: "#020202"
 footer-text-col: "#A0A0A0"
 footer-link-col: "#A0A0A0"
+paginate_path: "orig/page:num/"
 
 # Alternatively, the navbar, footer, and page background can be set to use background images
 # instead of colour
@@ -77,16 +78,16 @@ social-network-links:
   facebook: prosdkr
   github: prosdkr
   twitter: prosdkr
-#  reddit: yourname
-#  google-plus: +DeanAttali
+  #  reddit: yourname
+  #  google-plus: +DeanAttali
   linkedin: syedisamhashmi
-#  xing: yourname
-#  stackoverflow: "3943160/daattali"
+  #  xing: yourname
+  #  stackoverflow: "3943160/daattali"
   snapchat: prosdkr
   instagram: prosdkr
-#  youtube: user/deanat78
-#  spotify: yourname
-#  telephone: +12148625071
+  #  youtube: user/deanat78
+  #  spotify: yourname
+  #  telephone: +12148625071
   steam: prosdkr
 #  twitch: yourname
 #  yelp: yourname
@@ -100,7 +101,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "mhashmi.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "mhashmi.com" # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
@@ -154,16 +155,14 @@ kramdown:
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-      comments: true  # add comments to all blog posts
+      comments: true # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
-  -
-    scope:
+  - scope:
       path: "" # all files
     values:
       layout: "page"
@@ -185,8 +184,8 @@ exclude:
 
 # prose.io config
 prose:
-  rooturl: '_posts'
-  media: 'img'
+  rooturl: "_posts"
+  media: "img"
   ignore:
     - 404.html
     - LICENSE
@@ -234,11 +233,9 @@ prose:
           element: "checkbox"
           label: "Publish"
           help: "Check to publish post, uncheck to hide."
-
 plugins:
   - jekyll-paginate
   - jekyll-relative-links
   - jekyll-sitemap
-
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
