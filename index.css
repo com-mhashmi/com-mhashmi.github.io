@@ -1,0 +1,109 @@
+body {
+  background: black;
+}
+
+div {
+  color: #00ff00;
+  font-family: "Courier";
+  font-weight: 200;
+}
+
+h1 {
+  color: #00ff00;
+  font-family: "Courier";
+  font-weight: 200;
+}
+
+.title {
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+.console-wrapper {
+  text-align: center;
+}
+
+.console {
+  padding: 10px;
+  text-align: left;
+  margin-top: 2em;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 70%;
+  border: 2px solid #00ff00;
+}
+
+#oldText {
+  position: relative;
+  height: auto;
+  max-height: 95%;
+  bottom: 0;
+  /* padding: -100%; */
+  overflow: auto;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin-right: 1%;
+}
+
+#consoleText {
+  height: 10%;
+  overflow: scroll;
+  margin-right: 1%;
+  white-space: nowrap;
+}
+
+a {
+  color: #00ff00;
+}
+
+#consoleText::after {
+  content: "";
+  display: inline-block;
+  background-color: #00ff00;
+  vertical-align: top;
+  width: 10px;
+  height: 1em;
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+tab38 {
+  padding-left: 25.8em;
+}
+tab33 {
+  padding-left: 31.2em;
+}
+tab20 {
+  padding-left: 18.6em;
+}
+tab15 {
+  padding-left: 17.4em;
+}
+tab10 {
+  padding-left: 9.5em;
+}
