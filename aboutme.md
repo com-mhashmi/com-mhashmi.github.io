@@ -6,7 +6,13 @@ subtitle: Software Engineering Revolutionaire
 
 ### My Professional Information
 
-[![My GitHub Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra)](https://github-readme-stats.vercel.app/api?username=syedisamhashmi&show_icons=true&theme=dark&count_private=true)
+My most used languages!
+
+![most used languages](https://github-readme-stats.vercel.app/api/top-langs/?username=syedisamhashmi&theme=dark&count_private=true)
+
+My GitHub Stats!
+
+![stats](https://github-readme-stats.vercel.app/api?username=syedisamhashmi&show_icons=true&theme=dark&count_private=true)
 
 ---
 
