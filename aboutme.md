@@ -6,6 +6,8 @@ subtitle: Software Engineering Revolutionaire
 
 ### My Professional Information
 
+[![My GitHub Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra)](https://github-readme-stats.vercel.app/api?username=syedisamhashmi&show_icons=true&theme=dark&count_private=true)
+
 ---
 
 My name is Syed Isam Hashmi.
