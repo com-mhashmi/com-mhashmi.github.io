@@ -26,7 +26,7 @@ I have engineered data forms that have increased effeciency more than ten fold f
 
 No matter the situation, I keep my head up and always focus on my objective.
 
-I'm a 24 year old self-taught programmer with a bachelors degree in Computer Science from The University of Texas at Arlington. My dream is to become a video game developer. I plan to go into full-stack development until then.
+I'm a 25 year old self-taught programmer with a bachelors degree in Computer Science from The University of Texas at Arlington. My dream is to become a video game developer. I plan to go into full-stack development until then.
 
 I am always doing all I can to widen my skills and better my abilities.
 
