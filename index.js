@@ -6,9 +6,14 @@ let userText = "root@SyedIsamHashmi:~# ";
 let newLine = "<br />";
 var command = "";
 var commandHistory = [];
-let welcomeText = 'Welcome to mhashmi.com. To get started, please interact below. (Not tech savvy? Click <a href="./orig/index.html">here</a>)';
-
-
+let welcomeText =
+  'Welcome to mhashmi.com. To get started, please interact below. (Not tech savvy? Mobile? Click <a href="./orig/index.html">here to go to the main website</a>.)' +
+  newLine +
+  newLine +
+  "This is my interactive resume!" +
+  newLine +
+  'To view my actual resume, click <a href="www.mhashmi.com/resume.pdf">here</a>!' +
+  newLine;
 
 $(document).ready(function () {
   cons = $(consoleText);
@@ -30,11 +35,11 @@ $(document).ready(function () {
             // console.log(event.keyCode);
             var character = event.key;
             switch (event.key) {
-              case 'Tab':
-              case 'Alt':
-              case 'Control':
-              case 'Shift':
-              case 'Meta':
+              case "Tab":
+              case "Alt":
+              case "Control":
+              case "Shift":
+              case "Meta":
               case "ArrowUp":
               case "ArrowDown":
               case "ArrowLeft":
@@ -42,12 +47,12 @@ $(document).ready(function () {
               case "CapsLock":
               case "Delete":
                 return;
-              case 'Backspace':
+              case "Backspace":
                 command = command.slice(0, -1);
                 cons.text(userText + command);
                 updateScroll();
                 return;
-              case 'Enter': //Enter key
+              case "Enter": //Enter key
                 //   console.log("command is: " + command);
                 old.append(cons.text());
                 old.append(newLine);
@@ -55,7 +60,7 @@ $(document).ready(function () {
                 let toAdd = command;
                 commandHistory.push(toAdd);
                 command = "";
-          
+
                 cons.text(userText);
                 updateScroll();
                 return;
@@ -74,8 +79,6 @@ $(document).ready(function () {
   //   consoleText.focus();
 });
 
-
-
 function updateScroll() {
   old = $(oldText);
   old.scrollTop(old[0].scrollHeight);
@@ -91,7 +94,9 @@ function processCommand(command) {
   console.log(commandParts);
 
   if (!commands.includes(commandParts[0])) {
-    old.append("bash: " + commandParts.join(" ") + " command not found" + newLine);
+    old.append(
+      "bash: " + commandParts.join(" ") + " command not found" + newLine
+    );
   }
   switch (commandParts[0]) {
     case commands[0]: // help
@@ -113,10 +118,6 @@ function processCommand(command) {
   }
 }
 
-
-
 function sleepTest(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
-
