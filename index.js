@@ -12,7 +12,7 @@ let welcomeText =
   newLine +
   "This is my interactive resume!" +
   newLine +
-  'To view my actual resume, click <a href="www.mhashmi.com/resume.pdf">here</a>!' +
+  'To view my actual resume, click <a href="./resume.pdf">here</a>!' +
   newLine;
 
 $(document).ready(function () {
