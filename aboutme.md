@@ -34,7 +34,7 @@ I have engineered data forms that have increased effeciency more than ten fold f
 
 No matter the situation, I keep my head up and always focus on my objective.
 
-I'm a 25 year old self-taught programmer with a bachelors degree in Computer Science from The University of Texas at Arlington. My dream is to become a video game developer. I plan to go into full-stack development until then.
+I'm a {{ 'now' | date: "%Y" | minus:1996 }} year old self-taught programmer with a bachelors degree in Computer Science from The University of Texas at Arlington. My dream is to become a video game developer. I plan to go into full-stack development until then.
 
 I am always doing all I can to widen my skills and better my abilities.
 
@@ -48,4 +48,4 @@ I have learned how to read and write Korean, and plan to further educate myself 
 
 I play guitar okay-ish? I wouldn't consider myself anything better than average, but I let off my steam from frustrating programs and long hours of staring at a screen through music and video games.
 
-(This page was made >3 years ago. I do not have a ton of time to update this and keep up with it. If it seems a little outdated, its because it is. Working on multiple projects is tough! :D )
+(This page was made >3 years ago. I do not have a ton of time to update this and keep up with it. If it seems a little outdated, it's because it is. Working on multiple projects is tough! :D )
