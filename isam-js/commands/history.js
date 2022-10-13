@@ -9,13 +9,13 @@ function printHistory(command) {
       "If you would like more detailed information about me, keep exploring!" +
       newLine +
       newLine;
-    old.append(histStr);
+    oldTextElement.append(histStr);
   }
   if (commandParts.length == 2) {
     if (commandParts[1] === "--commands") {
       for (x in commandHistory) {
         let num = parseInt(x) + 1;
-        old.append(num + " " + commandHistory[x] + newLine);
+        oldTextElement.append(num + " " + commandHistory[x] + newLine);
       }
     }
 
@@ -59,14 +59,14 @@ function printHistory(command) {
         "                       Karma";
       newLine + "                       Jest";
 
-      old.append(newLine);
-      old.append(feLang);
-      old.append(feLibraries);
-      old.append(feBuild);
-      old.append(newLine);
-      old.append(testExp);
-      old.append(newLine);
-      old.append(newLine);
+      oldTextElement.append(newLine);
+      oldTextElement.append(feLang);
+      oldTextElement.append(feLibraries);
+      oldTextElement.append(feBuild);
+      oldTextElement.append(newLine);
+      oldTextElement.append(testExp);
+      oldTextElement.append(newLine);
+      oldTextElement.append(newLine);
     }
 
     if (commandParts[1] === "--be") {
@@ -126,17 +126,17 @@ function printHistory(command) {
         "<tab15>Azure Message Buses</tab15>" +
         newLine;
 
-      old.append(newLine);
-      old.append(beLang);
-      old.append(beLibraries);
-      old.append(beBuild);
-      old.append(apiExp);
-      old.append(apiDocExp);
-      old.append(newLine);
-      old.append(testExp);
-      old.append(cloudExp);
-      old.append(newLine);
-      old.append(newLine);
+      oldTextElement.append(newLine);
+      oldTextElement.append(beLang);
+      oldTextElement.append(beLibraries);
+      oldTextElement.append(beBuild);
+      oldTextElement.append(apiExp);
+      oldTextElement.append(apiDocExp);
+      oldTextElement.append(newLine);
+      oldTextElement.append(testExp);
+      oldTextElement.append(cloudExp);
+      oldTextElement.append(newLine);
+      oldTextElement.append(newLine);
     }
 
     if (commandParts[1] == "--sdlc") {
@@ -165,21 +165,21 @@ function printHistory(command) {
         "                           Kanban" +
         newLine;
 
-      old.append(newLine);
-      old.append(devOps);
-      old.append(devOpsExp);
-      old.append(newLine);
-      old.append(vcsExp);
-      old.append(newLine);
-      old.append(methodExp);
-      old.append(newLine);
-      old.append(newLine);
+      oldTextElement.append(newLine);
+      oldTextElement.append(devOps);
+      oldTextElement.append(devOpsExp);
+      oldTextElement.append(newLine);
+      oldTextElement.append(vcsExp);
+      oldTextElement.append(newLine);
+      oldTextElement.append(methodExp);
+      oldTextElement.append(newLine);
+      oldTextElement.append(newLine);
     }
 
     // if (commandParts[1] === "--hobby") {
     //   for (x in commandHistory) {
     //     let num = parseInt(x) + 1;
-    //     old.append(num + " " + commandHistory[x] + newLine);
+    //     oldTextElement.append(num + " " + commandHistory[x] + newLine);
     //   }
     // }
   }
