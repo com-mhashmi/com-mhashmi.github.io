@@ -21,10 +21,7 @@ I am a software engineer, and have been since I was ten years old. I have a pass
 
 I am consistently attempting to utilize algorithm theory and object-oriented design tactics to lean towards efficiency for programs that I interface with daily in order to take our world one step further.
 
-I am proficient in Java, C#, C, C++, HTML, JavaScript, CSS.
-In my professional career, I have utilized .NET, and I am familiar with its use and application.
-I am extremely interested in AR/VR/MR/XR technologies, and have developed for the Microsoft HoloLens.
-I have engineered data forms that have increased effeciency more than ten fold for many companies by using open source libraries that utilize JSON schemas, C# reflection, and C# interfaces.
+To get to know my professional history, check out my resume! :)
 
 ### My Personal Information
 
@@ -34,7 +31,7 @@ I have engineered data forms that have increased effeciency more than ten fold f
 
 No matter the situation, I keep my head up and always focus on my objective.
 
-I'm a {{ 'now' | date: "%Y" | minus:1996 }} year old self-taught programmer with a bachelors degree in Computer Science from The University of Texas at Arlington. My dream is to become a video game developer. I plan to go into full-stack development until then.
+I'm a {{ 'now' | date: "%Y" | minus:1996 }} year old self-taught programmer with a bachelors degree in Computer Science from The University of Texas at Arlington. My dream is to become a video game developer.
 
 I am always doing all I can to widen my skills and better my abilities.
 

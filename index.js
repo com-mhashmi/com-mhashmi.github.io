@@ -1,87 +1,80 @@
-var cons;
-var old;
-let consoleText = "#consoleText";
-let oldText = "#oldText";
-let userText = "root@SyedIsamHashmi:~# ";
-let newLine = "<br />";
-var command = "";
-var commandHistory = [];
-let welcomeText =
-  'Welcome to mhashmi.com. To get started, please interact below. (Not tech savvy? Mobile? Click <a href="./orig/index.html">here to go to the main website</a>.)' +
-  newLine +
-  newLine +
-  "This is my interactive resume!" +
-  newLine +
-  'To view my actual resume, click <a href="./resume.pdf">here</a>!' +
-  newLine;
+const FLAG__DO_BOOT_SEQUENCE = false;
 
-$(document).ready(function () {
-  cons = $(consoleText);
-  cons.hide();
-  old = $(oldText);
-  old.append("Logging in");
+// Once we are ready, load the main loop for entering and processing commands.
+$(document).ready(mainLoop);
 
-  sleepTest(500).then(() => {
-    old.append(".");
-    sleepTest(500).then(() => {
-      old.append(".");
-      sleepTest(500).then(() => {
-        old.append(".");
-        sleepTest(500).then(() => {
-          old.append(newLine + welcomeText + newLine);
-          cons.append(userText);
-          cons.show();
-          $(document).keydown(function (event) {
-            // console.log(event.keyCode);
-            var character = event.key;
-            switch (event.key) {
-              case "Tab":
-              case "Alt":
-              case "Control":
-              case "Shift":
-              case "Meta":
-              case "ArrowUp":
-              case "ArrowDown":
-              case "ArrowLeft":
-              case "ArrowRight":
-              case "CapsLock":
-              case "Delete":
-                return;
-              case "Backspace":
-                command = command.slice(0, -1);
-                cons.text(userText + command);
-                updateScroll();
-                return;
-              case "Enter": //Enter key
-                //   console.log("command is: " + command);
-                old.append(cons.text());
-                old.append(newLine);
-                processCommand(command);
-                let toAdd = command;
-                commandHistory.push(toAdd);
-                command = "";
+async function mainLoop() {
+  setupGlobalVariables();
 
-                cons.text(userText);
-                updateScroll();
-                return;
-              default:
-                command = command.concat(character);
-                // console.log(command);
-                cons.append(character);
-                updateScroll();
-            }
-          });
-        });
-      });
-    });
-  });
+  await bootSequence();
+
+  $(document).keydown(handleKeyPress);
   updateScroll();
-  //   consoleText.focus();
-});
+}
 
-function updateScroll() {
-  old = $(oldText);
-  old.scrollTop(old[0].scrollHeight);
+async function bootSequence() {
+  console.debug("Performing boot sequence");
+  // Who wants to wait 2seconds while developing locally???
+  if (FLAG__DO_BOOT_SEQUENCE) {
+    // hide console input text while displaying login sequence.
+    consoleTextElement.hide();
+
+    oldTextElement.append("Logging in");
+    await printPeriod();
+    await printPeriod();
+    await printPeriod();
+    oldTextElement.append(newLine);
+    waitMs(500);
+  }
+
+  oldTextElement.append(welcomeText);
+  consoleTextElement.append(userText);
+  consoleTextElement.show();
+}
+
+function handleKeyPress(event) {
+  var character = event.key;
+  switch (event.key) {
+    case "Tab":
+    case "Alt":
+    case "Control":
+    case "Shift":
+    case "Meta":
+    case "ArrowUp":
+
+    case "ArrowDown":
+    case "ArrowLeft":
+    case "ArrowRight":
+    case "CapsLock":
+    case "Delete":
+      return;
+    case "Backspace":
+      command = command.slice(0, -1);
+      consoleTextElement.text(userText + command);
+      updateScroll();
+      return;
+    case "Enter":
+      // Add current typed line to history.
+      oldTextElement.append(consoleTextElement.text());
+      // Add buffer for new console line to type in.
+      oldTextElement.append(newLine);
+      // Let's see what you typed.
+      processCommand(command);
+      // Regardless of what you typed, add to your history.
+      let toAdd = command;
+      commandHistory.push(toAdd);
+      // And reset your current command.
+      command = "";
+      // Reset current console typing area text.
+      consoleTextElement.text(userText);
+      updateScroll();
+      return;
+    default:
+      command = command.concat(character);
+      // console.log(command);
+      consoleTextElement.append(character);
+      updateScroll();
+  }
 }
 
 function processCommand(command) {
@@ -94,7 +87,7 @@ function processCommand(command) {
   console.log(commandParts);
 
   if (!commands.includes(commandParts[0])) {
-    old.append(
+    oldTextElement.append(
       "bash: " + commandParts.join(" ") + " command not found" + newLine
     );
   }
@@ -104,11 +97,11 @@ function processCommand(command) {
       return;
     case commands[1]: // whoami
       whoami(commandParts);
-      old.append(newLine);
+      oldTextElement.append(newLine);
       return;
     case commands[2]: // ping
       ping();
-      old.append(newLine);
+      oldTextElement.append(newLine);
       return;
     case commands[3]: // history
       printHistory(commandParts);
@@ -116,8 +109,4 @@ function processCommand(command) {
     case commands[4]: // cls
       clearScreen();
   }
-}
-
-function sleepTest(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
 }
