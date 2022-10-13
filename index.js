@@ -1,4 +1,4 @@
-const FLAG__DO_BOOT_SEQUENCE = false;
+const FLAG__DO_BOOT_SEQUENCE = true;
 
 // Once we are ready, load the main loop for entering and processing commands.
 $(document).ready(mainLoop);
@@ -84,7 +84,7 @@ function handleKeyPress(event) {
       processCommand(command);
       // Regardless of what you typed, add to your history.
       // Except if it's whitespace only...
-      if (checkForEmptyCommand(command)) {
+      if (!checkForEmptyCommand(command)) {
         commandHistory.push(command);
       }
       // And reset your current command.

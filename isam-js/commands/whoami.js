@@ -1,7 +1,7 @@
 function whoami(command) {
   if (command.length == 1) {
     oldTextElement.append(
-      "I have been in the industry for " +
+      "I have been in the industry for over " +
         (new Date().getFullYear() - 2018) +
         " years "
     );

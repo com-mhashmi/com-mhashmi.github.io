@@ -13,6 +13,7 @@ function printHistory(command) {
   }
   if (commandParts.length == 2) {
     if (commandParts[1] === "--commands") {
+      console.log(commandHistory);
       for (x in commandHistory) {
         let num = parseInt(x) + 1;
         oldTextElement.append(num + " " + commandHistory[x] + newLine);
@@ -124,6 +125,10 @@ function printHistory(command) {
         "&nbsp; Azure FunctionApps" +
         newLine +
         "<tab15>Azure Message Buses</tab15>" +
+        newLine +
+        "<tab15>NATS</tab15>" +
+        newLine +
+        "<tab15>NATS Streaming</tab15>" +
         newLine;
 
       oldTextElement.append(newLine);
@@ -176,11 +181,22 @@ function printHistory(command) {
       oldTextElement.append(newLine);
     }
 
-    // if (commandParts[1] === "--hobby") {
-    //   for (x in commandHistory) {
-    //     let num = parseInt(x) + 1;
-    //     oldTextElement.append(num + " " + commandHistory[x] + newLine);
-    //   }
-    // }
+    if (commandParts[1] == "--education") {
+      let education =
+        "Graduated with a bachelors in Computer Science from " +
+        newLine +
+        "          The University of Texas at Arlington" +
+        newLine +
+        newLine +
+        "Graduated with an associates of Science from " +
+        newLine +
+        "          Northlake Community College" +
+        newLine;
+
+      oldTextElement.append(newLine);
+      oldTextElement.append(education);
+      oldTextElement.append(newLine);
+      oldTextElement.append(newLine);
+    }
   }
 }
