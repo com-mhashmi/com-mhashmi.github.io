@@ -13,5 +13,5 @@ function updateScroll() {
 }
 
 function checkForEmptyCommand(command) {
-  return command == null || command.length == 0 || command.trim() !== "";
+  return command == null || command.length == 0 || command.trim() === "";
 }
