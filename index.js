@@ -40,9 +40,7 @@ function handleKeyPress(event) {
     case "Control":
     case "Shift":
     case "Meta":
-    case "ArrowUp":
 
-    case "ArrowDown":
     case "ArrowLeft":
     case "ArrowRight":
     case "CapsLock":
@@ -53,6 +51,30 @@ function handleKeyPress(event) {
       consoleTextElement.text(userText + command);
       updateScroll();
       return;
+
+    // Handle history traveral up
+    case "ArrowUp": {
+      // Don't allow user to go up past the last entered command.
+      if (currentCommandInHistory > commandHistory.length) {
+        return;
+      }
+      currentCommandInHistory += 1;
+      console.debug("Going up in history...");
+      handleArrowCommand();
+      return;
+    }
+    // Handle history traveral down
+    case "ArrowDown": {
+      // Don't allow user to go down past "nothing"
+      if (currentCommandInHistory <= 0) {
+        return;
+      }
+      currentCommandInHistory -= 1;
+      console.debug("Going down in history...");
+      handleArrowCommand();
+      return;
+    }
+
     case "Enter":
       // Add current typed line to history.
       oldTextElement.append(consoleTextElement.text());
@@ -61,13 +83,17 @@ function handleKeyPress(event) {
       // Let's see what you typed.
       processCommand(command);
       // Regardless of what you typed, add to your history.
-      let toAdd = command;
-      commandHistory.push(toAdd);
+      // Except if it's whitespace only...
+      if (checkForEmptyCommand(command)) {
+        commandHistory.push(command);
+      }
       // And reset your current command.
       command = "";
       // Reset current console typing area text.
       consoleTextElement.text(userText);
       updateScroll();
+      // Reset any up/down arrow traversal.
+      currentCommandInHistory = 0;
       return;
     default:
       command = command.concat(character);
@@ -81,10 +107,9 @@ function processCommand(command) {
   command = command.trim();
   commandParts = command.split(" ");
 
-  if (command.length == 0) {
+  if (checkForEmptyCommand(command)) {
     return;
   }
-  console.log(commandParts);
 
   if (!commands.includes(commandParts[0])) {
     oldTextElement.append(
@@ -109,4 +134,16 @@ function processCommand(command) {
     case commands[4]: // cls
       clearScreen();
   }
+}
+
+function handleArrowCommand() {
+  let currentCommand =
+    commandHistory[commandHistory.length - currentCommandInHistory];
+  console.log(
+    "Current command from history:",
+    currentCommand,
+    currentCommandInHistory
+  );
+  command = currentCommand ?? "";
+  consoleTextElement.text(userText + command);
 }

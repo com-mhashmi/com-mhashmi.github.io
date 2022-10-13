@@ -2,6 +2,7 @@
 let consoleTextElement;
 let oldTextElement;
 let commandHistory = [];
+let currentCommandInHistory = 0;
 
 function setupGlobalVariables() {
   console.debug("Setting up global variables");
