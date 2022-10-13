@@ -11,3 +11,7 @@ async function waitMs(ms) {
 function updateScroll() {
   oldTextElement.scrollTop(oldTextElement[0].scrollHeight);
 }
+
+function checkForEmptyCommand(command) {
+  return command == null || command.length == 0 || command.trim() === "";
+}
