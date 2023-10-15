@@ -1,10 +1,12 @@
 /// Element accessors
 const consoleText = "#consoleText";
+const postConsoleText = "#postConsoleText";
 const oldText = "#oldText";
 
 const userText = "root@SyedIsamHashmi:~# ";
 const newLine = "<br />";
 let command = "";
+let postcommand = "";
 const welcomeText =
   "Welcome to mhashmi.com. To get started, please interact below." +
   newLine +
