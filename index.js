@@ -96,8 +96,11 @@ function handleKeyPress(event) {
       currentCommandInHistory = 0;
       return;
     default:
+      if (event.key == 'k' && event.metaKey) {
+        clearScreen();
+        return;
+      }
       command = command.concat(character);
-      // console.log(command);
       consoleTextElement.append(character);
       updateScroll();
   }
