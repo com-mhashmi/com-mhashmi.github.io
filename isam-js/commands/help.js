@@ -4,35 +4,35 @@ let usage = [
   "whoami: whoami [--you]" + newLine,
   "ping: ping" + newLine,
   "history: history [--fe | --be | --sdlc | --skills | --education | --commands]" +
-    newLine,
+  newLine,
   "cls: cls" + newLine,
 ];
 let descriptions = [
   //0 Begin help help display text
   newLine +
-    "Display information about builtin commands." +
-    newLine +
-    newLine +
-    "&nbsp;Displays brief summaries of builtin commands. If NAME is " +
-    newLine +
-    "&nbsp;specified, gives detailed help on all commands matching NAME" +
-    newLine +
-    "&nbsp;otherwise the list of help topics is printed" +
-    newLine,
+  "Display information about builtin commands." +
+  newLine +
+  newLine +
+  "&nbsp;Displays brief summaries of builtin commands. If NAME is " +
+  newLine +
+  "&nbsp;specified, gives detailed help on all commands matching NAME" +
+  newLine +
+  "&nbsp;otherwise the list of help topics is printed" +
+  newLine,
   //0 End help help display text
 
   //1 Begin help whoami display text
   newLine +
-    "Display information about me!" +
-    newLine +
-    newLine +
-    "&nbsp;Displays a brief summary based on parameter" +
-    newLine +
-    newLine +
-    "&nbsp;Options: " +
-    newLine +
-    "&nbsp;&nbsp;--you&nbsp;&nbsp;Output information about you!" +
-    newLine,
+  "Display information about me!" +
+  newLine +
+  newLine +
+  "&nbsp;Displays a brief summary based on parameter" +
+  newLine +
+  newLine +
+  "&nbsp;Options: " +
+  newLine +
+  "&nbsp;&nbsp;--you&nbsp;&nbsp;Output information about you!" +
+  newLine,
   //1 End help whoami display text
 
   //2 Begin help ping display text
@@ -41,28 +41,28 @@ let descriptions = [
 
   //3 Begin help history display text
   newLine +
-    "Display information about my history." +
-    newLine +
-    newLine +
-    "&nbsp;Displays history. " +
-    newLine +
-    newLine +
-    "&nbsp;Options: " +
-    newLine +
-    "&nbsp;&nbsp;--fe          Output information about my front-end experience." +
-    newLine +
-    "&nbsp;&nbsp;--be          Output information about my back-end experience." +
-    newLine +
-    "&nbsp;&nbsp;--sdlc        Output information about my general dev experience." +
-    newLine +
-    "&nbsp;&nbsp;--skills      Output information about my skills that" +
-    newLine +
-    "<tab10>have not been put to professional use (yet!).</tab10>" +
-    newLine +
-    "&nbsp;&nbsp;--education   Output information about my education." +
-    newLine +
-    "&nbsp;&nbsp;--commands    Output commands run so far, because... why not? :)" +
-    newLine,
+  "Display information about my history." +
+  newLine +
+  newLine +
+  "&nbsp;Displays history. " +
+  newLine +
+  newLine +
+  "&nbsp;Options: " +
+  newLine +
+  "&nbsp;&nbsp;--fe          Output information about my front-end experience." +
+  newLine +
+  "&nbsp;&nbsp;--be          Output information about my back-end experience." +
+  newLine +
+  "&nbsp;&nbsp;--sdlc        Output information about my general dev experience." +
+  newLine +
+  "&nbsp;&nbsp;--skills      Output information about my skills that" +
+  newLine +
+  "<tab10>have not been put to professional use (yet!).</tab10>" +
+  newLine +
+  "&nbsp;&nbsp;--education   Output information about my education." +
+  newLine +
+  "&nbsp;&nbsp;--commands    Output commands run so far, because... why not? :)" +
+  newLine,
   //3 End help history display text
 
   //4 Begin help cls display text
@@ -78,7 +78,7 @@ function help(command) {
     );
     oldTextElement.append(
       "These shell commands are defined internally. Type 'help' to see this list." +
-        newLine
+      newLine
     );
     oldTextElement.append(
       "Type 'help name' to find out more about the function 'name'." + newLine
