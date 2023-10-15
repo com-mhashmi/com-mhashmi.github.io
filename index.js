@@ -34,15 +34,27 @@ async function bootSequence() {
 
 function handleKeyPress(event) {
   var character = event.key;
-  switch (event.key) {
+  switch (character) {
     case "Tab":
     case "Alt":
     case "Control":
     case "Shift":
     case "Meta":
-
-    case "ArrowLeft":
+      return;
     case "ArrowRight":
+      command = command + postcommand.substring(0, 1);
+      postcommand = postcommand.substring(1);
+      consoleTextElement.text(userText + command);
+      postConsoleTextElement.text(postcommand);
+      updateScroll();
+      return;
+    case "ArrowLeft":
+      postcommand = command.substring(command.length - 1) + postcommand;
+      command = command.slice(0, -1);
+      consoleTextElement.text(userText + command);
+      postConsoleTextElement.text(postcommand);
+      updateScroll();
+      return;
     case "CapsLock":
     case "Delete":
       return;
@@ -76,21 +88,24 @@ function handleKeyPress(event) {
     }
 
     case "Enter":
+      let fullCommand = command + postcommand;
       // Add current typed line to history.
-      oldTextElement.append(consoleTextElement.text());
+      oldTextElement.append(consoleTextElement.text() + postcommand);
       // Add buffer for new console line to type in.
       oldTextElement.append(newLine);
       // Let's see what you typed.
-      processCommand(command);
+      processCommand(fullCommand);
       // Regardless of what you typed, add to your history.
       // Except if it's whitespace only...
-      if (!checkForEmptyCommand(command)) {
-        commandHistory.push(command);
+      if (!checkForEmptyCommand(fullCommand)) {
+        commandHistory.push(fullCommand);
       }
       // And reset your current command.
+      postcommand = ""
       command = "";
       // Reset current console typing area text.
       consoleTextElement.text(userText);
+      postConsoleTextElement.text(postcommand);
       updateScroll();
       // Reset any up/down arrow traversal.
       currentCommandInHistory = 0;

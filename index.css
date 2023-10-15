@@ -44,7 +44,7 @@ h1 {
   margin-right: 1%;
 }
 
-#consoleText {
+#consoleTextWrapper {
   text-align: left;
   height: 10%;
   overflow: scroll;
@@ -56,10 +56,19 @@ a {
   color: #00ff00;
 }
 
+#consoleText {
+  display: inline;
+}
+
+#postConsoleText {
+  display: inline;
+  margin-left: -20px;
+}
+
 #consoleText::after {
   content: "";
   display: inline-block;
-  background-color: #00ff00;
+  background-color: #00ff00aa;
   vertical-align: top;
   width: 10px;
   height: 1em;

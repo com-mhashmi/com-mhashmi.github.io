@@ -1,5 +1,6 @@
 /// Global variables
 let consoleTextElement;
+let postConsoleTextElement;
 let oldTextElement;
 let commandHistory = [];
 let currentCommandInHistory = 0;
@@ -10,4 +11,5 @@ function setupGlobalVariables() {
   oldTextElement = $(oldText);
   // Get console typing text element
   consoleTextElement = $(consoleText);
+  postConsoleTextElement = $(postConsoleText);
 }
