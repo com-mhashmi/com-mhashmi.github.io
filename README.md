@@ -1,6 +1,4 @@
-# Beautiful Isam :)
-
-Includes some changes to the site, such as a console.
+# Build
 
 sudo su
 bundle exec jekyll serve

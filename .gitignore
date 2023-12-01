@@ -9,3 +9,6 @@ Thumbs.db
 ehthumbs.db
 
 .vs
+Gemfile.lock
+
+beautiful-jekyll-theme-*.gem
