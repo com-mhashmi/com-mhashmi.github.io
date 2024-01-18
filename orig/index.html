@@ -1,9 +1,10 @@
 ---
-layout: page
+layout: home
 title: Syed Isam Hashmi
 subtitle: Software Engineering Révolutionnaire
 use-site-title: true
 ---
+<!-- <link rel="stylesheet" href="../index.css" /> -->
 
 <script src="../js/jquery-3.6.1.min.js"></script>
 <script src="../js/bootstrap.js"></script>
@@ -36,9 +37,7 @@ use-site-title: true
         site.excerpt_length }} {% assign excerpt_word_count = post.excerpt |
         number_of_words %} {% if post.content != post.excerpt or
         excerpt_word_count > site.excerpt_length %}
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more"
-          >[Read&nbsp;More]</a
-        >
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
         {% endif %}
       </div>
     </div>
@@ -56,17 +55,11 @@ use-site-title: true
 <ul class="pager main-pager">
   {% if paginator.previous_page %}
   <li class="previous">
-    <a
-      href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-      >&larr; Newer Posts</a
-    >
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
   </li>
   {% endif %} {% if paginator.next_page %}
   <li class="next">
-    <a
-      href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-      >Older Posts &rarr;</a
-    >
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
   </li>
   {% endif %}
 </ul>
