@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1717387806|641902865';
+const CACHE_VERSION = '1717387753|4052137';
 /** @type {string} */
 const CACHE_PREFIX = 'DishDefender-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
